@@ -1,7 +1,7 @@
 package net.javaguides.springboot;
 
-import net.javaguides.springboot.model.User;
-import net.javaguides.springboot.repository.UserRepository;
+import net.javaguides.springboot.model.PlayerDetails;
+import net.javaguides.springboot.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,34 +15,29 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 	}
 
 	@Autowired
-	private UserRepository userRepository;
+	private PlayerRepository playerRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
 
-		User user = new User();
-		user.setFirstName("Mohammed");
-		user.setLastName("Arkam");
-		user.setEmailId("Arkam@gmail.com");
-		user.setPassword("test123");
-		user.setUserRole("SENDER");
-		userRepository.save(user);
-
-		User user1 = new User();
-		user1.setFirstName("Mohammed");
-		user1.setLastName("Ismail");
-		user1.setEmailId("Ismail@gmail.com");
-		user1.setPassword("test123");
-		user1.setUserRole("RECEIVER");
-		userRepository.save(user1);
-
-		User user2 = new User();
-		user2.setFirstName("Mohammed");
-		user2.setLastName("Irfan");
-		user2.setEmailId("Irfan@gmail.com");
-		user2.setPassword("test123");
-		user2.setUserRole("RIDER");
-		userRepository.save(user2);
-
+		PlayerDetails user = new PlayerDetails();
+		user.setPlayerName("Arkam");
+		user.setPlayerAge("26");
+		user.setPlayerBorn("1996/04/03");
+		user.setPlayerCountry("Sri lanka");
+		user.setPlayerHeight("6");
+		user.setPlayerPosition("Defend");
+		user.setPlayerApps("59");
+		user.setPlayerPlayedMinutes("256");
+		user.setPlayerGoals("56");
+		user.setPlayerAssist("45");
+		user.setPlayerYellowCard("28");
+		user.setPlayerRedCard("12");
+		user.setPlayerSpg("46%");
+		user.setPlayerPs("33");
+		user.setPlayerArialWon("44");
+		user.setPlayerMom("23");
+		user.setPlayerPerformance("Excellent");
+		playerRepository.save(user);
 	}
 }

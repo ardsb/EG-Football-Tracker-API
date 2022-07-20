@@ -13,24 +13,66 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "Players")
-public class User {
+public class PlayerDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "first_name")
-    private String firstName;
+    
+    @Column(name = "name")
+    private String playerName;
 
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "age")
+    private String playerAge;
 
-    @Column(name = "email_id")
-    private String emailId;
+    @Column(name = "born")
+    private String playerBorn;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "country")
+    private String playerCountry;
 
-    @Column(name = "user_role")
-    private String userRole;
+    @Column(name = "height")
+    private String playerHeight;
+
+    @Column(name = "position")
+    private String playerPosition;
+
+    @Column(name = "apps")
+    private String playerApps;
+
+    @Column(name = "minutes")
+    private String playerPlayedMinutes;
+
+    @Column(name = "goals")
+    private String playerGoals;
+
+
+    @Column(name = "assist")
+    private String playerAssist;
+
+
+
+    @Column(name = "yellow_card")
+    private String playerYellowCard;
+
+    @Column(name = "red_card")
+    private String playerRedCard;
+
+    @Column(name = "spg")
+    private String playerSpg;
+
+    @Column(name = "ps")
+    private String playerPs;
+
+    @Column(name = "won")
+    private String playerArialWon;
+
+    @Column(name = "mom")
+    private String playerMom;
+
+    @Column(name = "performance")
+    private String playerPerformance;
+
+
 }
